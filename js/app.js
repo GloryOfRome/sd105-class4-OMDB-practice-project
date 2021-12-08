@@ -8,7 +8,6 @@ const searchInputEle = document.querySelector('input');
 const getMovies = (url => {
   return fetch(url)
     .then(response => {
-      // console.log(response);
       if (response.ok) {
         return response.json();
       } else {
@@ -22,7 +21,6 @@ const getMovies = (url => {
 const getMovieByOMDBId = (omdbId => {
   return fetch(`https://www.omdbapi.com/?apikey=1fa05dfc&i=${omdbId}`)
     .then(response => {
-      // console.log(response);
       if (response.ok) {
         return response.json();
       } else {
@@ -34,7 +32,6 @@ const getMovieByOMDBId = (omdbId => {
 
 // 3.render movies in HTML
 const renderMovies = (movies => {
-  // console.log(movies.Response);
   if (movies.Response === 'True') {
     movies.Search.forEach(movie => {
       const omdbID = movie.imdbID;
