@@ -1,0 +1,22 @@
+{
+  "name": "sd105-class4-omdb-practice-project-git",
+  "version": "1.0.0",
+  "description": "sd105-class4-omdb-practice-project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AngelaLiu1123/sd105-class4-OMDB-practice-project.git"
+  },
+  "author": "Ling Liu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AngelaLiu1123/sd105-class4-OMDB-practice-project/issues"
+  },
+  "homepage": "https://github.com/AngelaLiu1123/sd105-class4-OMDB-practice-project#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
