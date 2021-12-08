@@ -18,6 +18,7 @@ const getMovies = (url => {
     });
 });
 
+// 2.get movie detail by OMDBId
 const getMovieByOMDBId = (omdbId => {
   return fetch(`https://www.omdbapi.com/?apikey=1fa05dfc&i=${omdbId}`)
     .then(response => {
@@ -31,6 +32,7 @@ const getMovieByOMDBId = (omdbId => {
     });
 });
 
+// 3.render movies in HTML
 const renderMovies = (movies => {
   // console.log(movies.Response);
   if (movies.Response === 'True') {
@@ -59,9 +61,11 @@ const renderMovies = (movies => {
 
 });
 
+// 4.add keypress(Enter key) event listener for search form element
 searchFormEle.addEventListener('keypress', handleSearchMovies);
 // titlesWrapperEle.addEventListener('mouseover', handleShowMovieText)
 
+// 5.handle search movies mothod
 function handleSearchMovies(e) {
   const searchTitle = searchInputEle.value;
   console.log(searchTitle);
@@ -77,13 +81,7 @@ function handleSearchMovies(e) {
   }
 }
 
-// function handleShowMovieText(e) {
-//   // console.log(e.target.nodeName);
-//   // if (e.target.nodeName === 'IMG') {
-    
-//   // }
-// }
-
+// 6.run getMovies method to get movies data
 getMovies('data/movies.json')
 .then(data => {
   console.log(data);
